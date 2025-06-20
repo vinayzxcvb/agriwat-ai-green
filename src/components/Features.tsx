@@ -1,23 +1,23 @@
 
 import React from 'react';
-import { Map-pin, Image, Contact, Leaf } from 'lucide-react';
+import { MapPin, BarChart3, Users, Leaf } from 'lucide-react';
 
 export const Features = () => {
   const features = [
     {
-      icon: Map-pin,
+      icon: MapPin,
       title: "Smart Irrigation System",
       description: "Automated irrigation scheduling based on real-time soil conditions, weather data, and crop requirements.",
       color: "bg-green-100 text-green-600"
     },
     {
-      icon: Image,
+      icon: BarChart3,
       title: "Water Usage Dashboard",
       description: "Comprehensive analytics and visualization of water consumption patterns with actionable insights.",
       color: "bg-blue-100 text-blue-600"
     },
     {
-      icon: Contact,
+      icon: Users,
       title: "Crop-Specific Advice",
       description: "Personalized recommendations for different crops including optimal watering schedules and nutrient timing.",
       color: "bg-yellow-100 text-yellow-600"
