@@ -1,18 +1,20 @@
 
 import React from 'react';
 import { Leaf, Sun, Calendar } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const About = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            About the Project
+            {t('aboutTitle')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            AgriWat leverages artificial intelligence to address critical challenges in agriculture and water management, 
-            creating sustainable solutions for modern farming.
+            {t('aboutDescription')}
           </p>
         </div>
 
@@ -25,10 +27,9 @@ export const About = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Irrigation</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('aiPoweredIrrigation')}</h3>
                 <p className="text-gray-600">
-                  Our intelligent irrigation system uses machine learning algorithms to analyze soil moisture, 
-                  weather patterns, and crop requirements to optimize water usage and maximize yield.
+                  {t('aiIrrigationDesc')}
                 </p>
               </div>
             </div>
@@ -40,10 +41,9 @@ export const About = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Water Stress Detection</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('waterStressDetection')}</h3>
                 <p className="text-gray-600">
-                  Advanced sensors and computer vision technology monitor crop health in real-time, 
-                  detecting early signs of water stress before they impact productivity.
+                  {t('waterStressDesc')}
                 </p>
               </div>
             </div>
@@ -55,10 +55,9 @@ export const About = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('predictiveAnalytics')}</h3>
                 <p className="text-gray-600">
-                  Historical data and weather forecasts are processed through AI models to predict 
-                  optimal planting times, harvest schedules, and resource allocation.
+                  {t('predictiveDesc')}
                 </p>
               </div>
             </div>
@@ -76,12 +75,9 @@ export const About = () => {
 
         <div className="mt-16 bg-green-50 rounded-2xl p-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Problem We're Solving</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('problemTitle')}</h3>
             <p className="text-gray-700 text-lg max-w-4xl mx-auto">
-              Agriculture consumes 70% of global freshwater resources, yet inefficient irrigation practices lead to 
-              massive water waste. Climate change and growing populations demand smarter, more sustainable farming methods. 
-              AgriWat bridges this gap by providing farmers with AI-driven insights that reduce water consumption while 
-              increasing crop yields.
+              {t('problemDesc')}
             </p>
           </div>
         </div>

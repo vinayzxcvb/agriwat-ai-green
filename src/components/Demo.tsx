@@ -1,7 +1,12 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Bot, ExternalLink } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Demo = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="demo" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,31 +23,39 @@ export const Demo = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-gray-900">
-              Interactive Dashboard Preview
+              Interactive AI Assistant
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Our intuitive dashboard provides farmers with real-time insights into their water usage, 
-              crop health, and environmental conditions. The AI-powered recommendations help optimize 
-              irrigation schedules and improve overall farm efficiency.
+              Try our multilingual AI assistant that helps farmers make informed decisions about 
+              irrigation, crop management, and water conservation. Available in English, Hindi, and Telugu.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-gray-700">Real-time sensor data visualization</span>
+                <span className="text-gray-700">Real-time farming advice</span>
               </li>
               <li className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-gray-700">Automated irrigation scheduling</span>
+                <span className="text-gray-700">Multilingual support</span>
               </li>
               <li className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-gray-700">Predictive analytics and alerts</span>
+                <span className="text-gray-700">Crop-specific recommendations</span>
               </li>
               <li className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-gray-700">Mobile-responsive interface</span>
+                <span className="text-gray-700">Weather-based insights</span>
               </li>
             </ul>
+            
+            <Link
+              to="/ai-assistant"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors duration-300"
+            >
+              <Bot className="h-5 w-5 mr-2" />
+              Try AI Assistant
+              <ExternalLink className="h-4 w-4 ml-2" />
+            </Link>
           </div>
 
           <div className="relative">
@@ -53,7 +66,7 @@ export const Demo = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M19 10a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-2">Demo Coming Soon</h4>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Dashboard Demo Coming Soon</h4>
                 <p className="text-gray-600">
                   Interactive prototype and video demonstrations will be available here
                 </p>

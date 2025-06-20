@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToAbout = () => {
     const element = document.getElementById('about');
     if (element) {
@@ -22,26 +25,25 @@ export const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
         <div className="animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-            <span className="text-green-600">AgriWat</span>
+            <span className="text-green-600">{t('heroTitle')}</span>
             <br />
             <span className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-700">
-              AI for Agriculture & Water Management
+              {t('heroSubtitle')}
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Revolutionizing farming with intelligent water management, crop monitoring, and AI-driven insights 
-            to optimize agricultural productivity while conserving our precious water resources.
+            {t('heroDescription')}
           </p>
 
           <div className="mb-12">
             <p className="text-sm md:text-base text-gray-500 mb-6 max-w-2xl mx-auto">
-              Addressing critical challenges in modern agriculture through cutting-edge technology
+              {t('heroTagline')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-              <span className="bg-white/70 px-4 py-2 rounded-full">🌱 Smart Irrigation</span>
-              <span className="bg-white/70 px-4 py-2 rounded-full">💧 Water Conservation</span>
-              <span className="bg-white/70 px-4 py-2 rounded-full">📊 Crop Analytics</span>
+              <span className="bg-white/70 px-4 py-2 rounded-full">{t('smartIrrigation')}</span>
+              <span className="bg-white/70 px-4 py-2 rounded-full">{t('waterConservation')}</span>
+              <span className="bg-white/70 px-4 py-2 rounded-full">{t('cropAnalytics')}</span>
             </div>
           </div>
 
@@ -49,7 +51,7 @@ export const Hero = () => {
             onClick={scrollToAbout}
             className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Learn More
+            {t('learnMore')}
             <ArrowDown className="ml-2 h-5 w-5" />
           </button>
         </div>
